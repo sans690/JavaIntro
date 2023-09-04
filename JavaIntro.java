@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class JavaIntro {
 
     public static void main(String[] args) {
-        /// prints statement
+        ///prints statement
         System.out.println("Welcome to the game!");
         // takes in input from the user, new instance
         Scanner input = new Scanner(System.in);
@@ -21,15 +21,13 @@ public class JavaIntro {
         System.out.println("What is your choice?");
         // string userMove equal the input of the next line
         String userMove = input.nextLine();
-        // string computerMoves equals new random instance that is an int that within
-        // the length of the OC
+        // string computerMoves equals new random instance that is an int that within the length of the OC
         String computerMove = optionalChoices[new Random().nextInt(optionalChoices.length)];
         System.out.println("The computer picked " + computerMove + ".");
         int result = rpsls(userMove, computerMove);
         System.out.println("rpsls: (\"" + userMove + "\", \"" + computerMove + "\") " + result);
         int target = 50;
         int max = 100;
-        int min = 0;
         // takes input from user
         Scanner scan = new Scanner(System.in);
         System.out.println("What number would you like for your input?");
@@ -51,35 +49,33 @@ public class JavaIntro {
         System.out.println(count1);
         System.out.println(count2);
         System.out.println(count3);
-
+        
+    
         while (true)
 
         {
             // calling the method
-            int num = hilo(max, target, min);
-            //
+            int num = hilo(max, target);
+            // 
             if (num > target) {
                 System.out.println("The number is too high!");
-                max = num - 1;
-            } else if (num < target) {
-                System.out.println("The number is too low!");
-                min = num + 1;
-            }
-
-            else {
+                max = num - 1; }
+           
+            else if(num == target){
                 System.out.println("You found the number!");
-
                 break;
 
+                } else {
+                System.out.println("The number is too low!");
+            }
             }
         }
-    }
 
-    public static int hilo(int max, int target, int min) {
+    public static int hilo(int max, int target) {
         // randNum equals another instance of Random
         Random randNum = new Random();
         // randNumGenerated is equal to the number generated between the two numbers
-        int num = randNum.nextInt((max - min) + 1) + min;
+        int num = randNum.nextInt((max) + 1);
         System.out.println("Number generated: " + num);
         // returns value back to caller
         return num;
