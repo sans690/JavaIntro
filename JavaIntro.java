@@ -3,7 +3,6 @@
 // Homework Name:e.g. JavaIntro
 // Resources used (if applicable) ChatGPT(full citation at the bottom)
 
-
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -11,7 +10,7 @@ import java.util.Scanner;
 public class JavaIntro {
 
     public static void main(String[] args) {
-        ///prints statement
+        /// prints statement
         System.out.println("Welcome to the game!");
         // takes in input from the user, new instance
         Scanner input = new Scanner(System.in);
@@ -22,7 +21,8 @@ public class JavaIntro {
         System.out.println("What is your choice?");
         // string userMove equal the input of the next line
         String userMove = input.nextLine();
-        // string computerMoves equals new random instance that is an int that within the length of the OC
+        // string computerMoves equals new random instance that is an int that within
+        // the length of the OC
         String computerMove = optionalChoices[new Random().nextInt(optionalChoices.length)];
         System.out.println("The computer picked " + computerMove + ".");
         int result = rpsls(userMove, computerMove);
@@ -51,15 +51,14 @@ public class JavaIntro {
         System.out.println(count1);
         System.out.println(count2);
         System.out.println(count3);
-        
-    
+
         while (true)
 
         {
             // calling the method
             int num = hilo(max, target, min);
-            // 
-            if (num> target) {
+            //
+            if (num > target) {
                 System.out.println("The number is too high!");
                 max = num - 1;
             } else if (num < target) {
@@ -69,6 +68,7 @@ public class JavaIntro {
 
             else {
                 System.out.println("You found the number!");
+
                 break;
 
             }
@@ -88,7 +88,8 @@ public class JavaIntro {
     public static int rpsls(String userChoice, String computerChoice) {
         if (userChoice.equals(computerChoice)) {
             return 0; // It's a draw
-        // else if the userChoice equals rock and the computerfChoice equals scissors or the computerChoice equals lizard
+            // else if the userChoice equals rock and the computerfChoice equals scissors or
+            // the computerChoice equals lizard
         } else if ((userChoice.equals("rock") && (computerChoice.equals("scissors") || computerChoice.equals("lizard")))
                 ||
                 (userChoice.equals("paper") && (computerChoice.equals("rock") || computerChoice.equals("spock"))) ||
