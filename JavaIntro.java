@@ -35,7 +35,7 @@ public class JavaIntro {
         int one = 3;
         int two = 5;
         // calling the method
-        String result2 = fuzzbizz(one, two, input2);
+        fuzzbizz(one, two, input2);
         int[] arr1 = { 1, 2, 2, 3, 4, 4 };
         int[] arr2 = { 1, 1, 2, 1, 1 };
         int[] arr3 = { 1, 1, 1, 1, 1 };
@@ -45,6 +45,7 @@ public class JavaIntro {
         System.out.println(count1);
         System.out.println(count2);
         System.out.println(count3);
+        
     
         while (true)
 
