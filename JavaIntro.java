@@ -83,7 +83,7 @@ public class JavaIntro {
 
     public static int rpsls(String userChoice, String computerChoice) {
         if (userChoice.equals(computerChoice)) {
-            return 0; // It's a draw
+            return -1; // It's a draw
             // else if the userChoice equals rock and the computerfChoice equals scissors or
             // the computerChoice equals lizard
         } else if ((userChoice.equals("rock") && (computerChoice.equals("scissors") || computerChoice.equals("lizard")))
@@ -95,7 +95,7 @@ public class JavaIntro {
                 (userChoice.equals("spock") && (computerChoice.equals("scissors") || computerChoice.equals("rock")))) {
             return 1; // You win
         } else {
-            return -1; // Computer wins
+            return 0; // Computer wins
         }
     }
 
