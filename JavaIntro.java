@@ -1,3 +1,9 @@
+// Name:e.g. Saniyah Smith
+// Computing ID:e.g. xjk8nm@hogwarts.edu
+// Homework Name:e.g. JavaIntro
+// Resources used (if applicable) ChatGPT(full citation at the bottom)
+
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -51,14 +57,14 @@ public class JavaIntro {
 
         {
             // calling the method
-            int randNumGenerated = hilo(max, target, min);
+            int num = hilo(max, target, min);
             // 
-            if (randNumGenerated > target) {
+            if (num> target) {
                 System.out.println("The number is too high!");
-                max = randNumGenerated - 1;
-            } else if (randNumGenerated < target) {
+                max = num - 1;
+            } else if (num < target) {
                 System.out.println("The number is too low!");
-                min = randNumGenerated + 1;
+                min = num + 1;
             }
 
             else {
@@ -73,10 +79,10 @@ public class JavaIntro {
         // randNum equals another instance of Random
         Random randNum = new Random();
         // randNumGenerated is equal to the number generated between the two numbers
-        int randNumGenerated = randNum.nextInt((max - min) + 1) + min;
-        System.out.println("Number generated: " + randNumGenerated);
+        int num = randNum.nextInt((max - min) + 1) + min;
+        System.out.println("Number generated: " + num);
         // returns value back to caller
-        return randNumGenerated;
+        return num;
     }
 
     public static int rpsls(String userChoice, String computerChoice) {
