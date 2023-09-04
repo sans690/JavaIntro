@@ -50,7 +50,7 @@ public class JavaIntro {
 
         {
             // calling the method
-            int randNumGenerated = hilo(target, min, max);
+            int randNumGenerated = hilo(max, target, min);
             // 
             if (randNumGenerated > target) {
                 System.out.println("The number is too high!");
@@ -68,7 +68,7 @@ public class JavaIntro {
         }
     }
 
-    public static int hilo(int target, int min, int max) {
+    public static int hilo(int max, int target, int min) {
         // randNum equals another instance of Random
         Random randNum = new Random();
         // randNumGenerated is equal to the number generated between the two numbers
