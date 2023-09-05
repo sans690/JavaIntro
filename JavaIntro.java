@@ -23,7 +23,7 @@ public class JavaIntro {
         String userMove = input.nextLine();
         // string computerMoves equals new random instance that is an int that within the length of the OC
         String computerMove = optionalChoices[new Random().nextInt(optionalChoices.length)];
-        System.out.println("The computer picked " + computerMove + ".");
+        System.out.println(computerMove);
         int result = rpsls(userMove, computerMove);
         System.out.println("rpsls: (\"" + userMove + "\", \"" + computerMove + "\") " + result);
         int target = 50;
@@ -82,17 +82,17 @@ public class JavaIntro {
     }
 
     public static int rpsls(String userChoice, String computerChoice) {
-        if (userChoice.equals(computerChoice)) {
+        if (userChoice.equalsIgnoreCase(computerChoice)) {
             return -1; // It's a draw
             // else if the userChoice equals rock and the computerfChoice equals scissors or
-            // the computerChoice equals lizard
-        } else if ((userChoice.equals("rock") && (computerChoice.equals("scissors") || computerChoice.equals("lizard")))
+            // the computerChoice equals lizard 
+        } else if ((userChoice.equalsIgnoreCase("rock") && (computerChoice.equalsIgnoreCase("scissors") || computerChoice.equalsIgnoreCase("lizard")))
                 ||
-                (userChoice.equals("paper") && (computerChoice.equals("rock") || computerChoice.equals("spock"))) ||
-                (userChoice.equals("scissors") && (computerChoice.equals("paper") || computerChoice.equals("lizard")))
+                (userChoice.equalsIgnoreCase("paper") && (computerChoice.equalsIgnoreCase("Rock") || computerChoice.equalsIgnoreCase("spock"))) ||
+                (userChoice.equalsIgnoreCase("scissors") && (computerChoice.equalsIgnoreCase("paper") || computerChoice.equalsIgnoreCase("lizard")))
                 ||
-                (userChoice.equals("lizard") && (computerChoice.equals("spock") || computerChoice.equals("paper"))) ||
-                (userChoice.equals("spock") && (computerChoice.equals("scissors") || computerChoice.equals("rock")))) {
+                (userChoice.equalsIgnoreCase("lizard") && (computerChoice.equalsIgnoreCase("spock") || computerChoice.equalsIgnoreCase("paper"))) ||
+                (userChoice.equalsIgnoreCase("spock") && (computerChoice.equalsIgnoreCase("scissors") || computerChoice.equalsIgnoreCase("rock")))) {
             return 1; // You win
         } else {
             return 0; // Computer wins
